@@ -19,9 +19,9 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 										<span>${res[i].price}</span>
 									</a>`
 						}
-						$(".phone_show").html(html);						
+						$(".phone_show").html(html);
 					}
-				})	
+				})
 			})
 			$("#phone").mouseleave(function(){
 				$(".phone_show").stop().animate({opacity:0,height:0}, 300);
@@ -30,7 +30,7 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
             // 滚动出现顶部导航栏------------------------------------------------
             $(window).scroll(function(){
             	if($(window).scrollTop() > 70){
-            		$(".nav_sub").css("position","fixed").css("top",0).css("left",20).css("zIndex",1000).css("border","1px solid #EDEDED");
+            		$(".nav_sub").css("position","fixed").css("top",0).css("left",50).css("zIndex",1000).css("border","1px solid #EDEDED").css("padding-right",50);
             		$("#shopCart").css("position","fixed").css("top",35).css("right",60).css("zIndex",1001);
 
 
@@ -40,7 +40,7 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
             	}
             })
 
-			
+
 			//<1>下载商品列表-------------------------------------------------------
 			$.ajax({
 				url: "../data/newshow.json",
@@ -51,7 +51,7 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 					for(var i = 0; i < res.length; i++){
 						html += `<a href=""><img src="${res[i].img}"/></a>`
 					}
-					$(".newshow").html(html);					
+					$(".newshow").html(html);
 				}
 			})
 
@@ -64,10 +64,22 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 					for(var i = 0; i < res.length; i++){
 						html += `<a href="goodsdetail.html?id=${res[i].id}"><h5 class="detail">查看详情</h5><h6 class="tocart" id="${res[i].id}">加入购物车</h6><img src="${res[i].img}"/><h4>${res[i].title}</h4><span>${res[i].decri}</span><p>${res[i].price}</p></a>`
 					}
-					$(".goods").html(html);					
+					$(".goods").html(html);
 				}
 			})
-			
+			/*发布会*/
+			$.ajax({
+				url:"../data/autumn.json",
+				type: "GET",
+				success: function(res){
+					//alert(res);
+					var html = "";
+					for(var i = 0; i < res.length; i++){
+						html += `<li><a href=""><img src="${res[i].img}" alt=""></a></li>`
+					}
+					$(".autumn ul").html(html);
+				}
+			})
 			//单例设计模式显示提示框--------------------------------------------
 			var singleton = (function(){
 					var oDiv = null;
@@ -89,7 +101,8 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 			//【注】当我们想要去找按钮的时候，这些按钮还没有加载出来
 			//【注】直接通过事件委托的方式添加事件，添加事件给父级
 			$(".goods").on("click",".tocart",function(){
-				singleton();				
+				//alert(1);
+				singleton();
 
 				//进行抛物线运动
 				ballMove.ballMove(this);
@@ -177,7 +190,7 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 					type: "get",
 					success: function(res){
 						//a:找出所有cookie数据
-						
+
 						if(!$.cookie("goods")){
 							//要将购物车内的商品清空
 							$(".cart ul").html("");
@@ -187,7 +200,7 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 						var arr = eval($.cookie("goods"));
 						var html = '';
 						for(var i = 0; i < arr.length; i++){
-							//用id当做下标取出数据	
+							//用id当做下标取出数据
 							html += `<li>
 								<div class="pic_gs">
 									<img src="${res[arr[i].id].img}">
@@ -197,10 +210,10 @@ define(["ballMove", "jquery", "jquery-cookie"], function(ballMove, $){
 									<p>${res[arr[i].id].decri}</p>
 									<span>￥ ${res[arr[i].id].price}</span><span>* ${arr[i].num}</span>
 								</div>
-							</li>`			
+							</li>`
 						}
 						$("#show_Cart").html(html);
-					}	
+					}
 				})
 			}
 		})

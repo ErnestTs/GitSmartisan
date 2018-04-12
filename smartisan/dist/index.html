@@ -2,11 +2,192 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>首页</title>
     <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/head.min.css">
     <script src = "js/require.js" async = "true" defer data-main = "js/main"></script>
 </head>
 <body>
-    <h1>首页锤子</h1>
+    <!-- 头部  -->
+    <div class="header">
+            <div class="container clear">
+                <h1 class="nav_logo"><a href="index.html" title="锤子科技官网"></a></h1>
+                <ul class="nav_list clear">
+                    <li><a href="">官方论坛</a></li>
+                    <li><a href="">应用下载</a></li>
+                    <li><a href="">欢喜云</a></li>
+                    <li><a href="">Smartisan OS</a></li>
+                    <li><a href="">坚果Pro</a></li>
+                    <li><a href="">坚果Pro2</a></li>
+                    <li><a href="index.html">在线商城</a></li>
+                </ul>
+                <ul class="nav_aside clear">
+                    <li><a href="login.html"></a></li>
+                    <li id="shopCart"><a href="shoppingList.html"></a><span class="cart">0</span>
+                        <ul id="show_Cart">
+                            <!-- 加载购物车里的商品 -->
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    <!--导航栏  -->
+    <div class = "nav_sub">
+        <ul>
+            <li class = "active"><a href="">首页</a></li>
+            <li id = "phone">
+                <a href="">手机</a>
+                <div class = "phone_show">
+
+                </div>
+            </li>
+            <li><a href="">"足迹"手感膜</a></li>
+            <li><a href="">官方配件</a></li>
+            <li><a href="">空气净化类</a></li>
+            <li><a href="">品牌周边</a></li>
+            <li><a href="">第三方商品</a></li>
+            <li><a href="goodsList.html">全部</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">企业团购</a></li>
+        </ul>
+    </div>
+    <!-- 轮播图 -->
+    <div class = "banner" id = "play">
+        <ul>
+            <!-- <li><a href=""><img src="images/banner.png" alt=""></a></li> -->
+        </ul>
+        <!-- 小圆点 -->
+        <ol>
+            <li class = "bg_white"></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!-- 轮播图下面 -->
+    <div class = "newshow clear">
+        <!-- <a href=""><img src="images/d992b49f63f39a526ff8ed4bd3eaa03a.jpg" alt=""></a>
+        <a href=""><img src="images/d992b49f63f39a526ff8ed4bd3eaa03a.jpg" alt=""></a>
+        <a href=""><img src="images/d992b49f63f39a526ff8ed4bd3eaa03a.jpg" alt=""></a>
+        <a href=""><img src="images/d992b49f63f39a526ff8ed4bd3eaa03a.jpg" alt=""></a> -->
+    </div>
+    <!-- 商品列表 -->
+    <div class = "goods clear">
+        <!-- <h5>热门商品</h5>
+        <a href="">
+            <h5 class="detail">查看详情</h5>
+            <h6 class="tocart" id="">加入购物车</h6>
+            <img src="../images/8b67cb957b43ad49affa7295256bb8f21.webp"/>
+            <h4>畅呼吸防雾霾口罩</h4>
+            <span>五层防护、畅快呼吸</span>
+            <p>99.00</p>
+        </a> -->
+        <!-- <a href="">
+            <h5 class="detail">查看详情</h5>
+            <h6 class="tocart" id="">加入购物车</h6>
+            <img src="../images/787556c85c703474b3f90c68f11fd896.webp"/>
+            <h4>畅呼吸防雾霾口罩</h4>
+            <span>五层防护、畅快呼吸</span>
+            <p>99.00</p>
+        </a>
+        <a href="">
+            <h5 class="detail">查看详情</h5>
+            <h6 class="tocart" id="">加入购物车</h6>
+            <img src="../images/787556c85c703474b3f90c68f11fd896.webp"/>
+            <h4>畅呼吸防雾霾口罩</h4>
+            <span>五层防护、畅快呼吸</span>
+            <p>99.00</p>
+        </a>
+        <a href="">
+            <h5 class="detail">查看详情</h5>
+            <h6 class="tocart" id="">加入购物车</h6>
+            <img src="../images/787556c85c703474b3f90c68f11fd896.webp"/>
+            <h4>畅呼吸防雾霾口罩</h4>
+            <span>五层防护、畅快呼吸</span>
+            <p>99.00</p>
+        </a> -->
+    </div>
+    <!-- 发布会 -->
+    <div class = "autumn">
+        <ul>
+            <!-- <li><a href=""><img src="../images/88684d7ed5eee77e34f044fa32a9121b (1).png" alt=""></a></li>
+            <li><a href=""><img src="../images/0c68fc06c54c2d857a34b3f3a681c3511.jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/c245ada282824a4a15e68bec80502ad4 (1).jpg" alt=""></a></li>
+            <li><a href=""><img src="../images/minibanner_03 (1).jpg" alt=""></a></li> -->
+        </ul>
+    </div>
+    <!-- 锤子应用 -->
+    <div class="app">
+            <ul class="clear">
+                <h1>锤子应用</h1>
+                <li>
+                    <div class="app_pic1"></div>
+                    <h4>HandShaker</h4>
+                    <p>HandShaker 是连接手机和电脑之间的文件传输及管理工具</p>
+                </li>
+                <li>
+                    <div class="app_pic2"></div>
+                    <h4>锤子便签</h4>
+                    <p>可能是史上最漂亮的便签应用，你或许会因它重新喜欢上记录和表达</p>
+                </li>
+                <li>
+                    <div class="app_pic3"></div>
+                    <h4>锤子桌面</h4>
+                    <p>舒适而精深的聚合阅读应用，通过甄选入驻站点和编辑推荐文章</p>
+                </li>
+                <li>
+                    <div class="app_pic4"></div>
+                    <h4>锤子科技论坛</h4>
+                    <p>锤子科技论坛设计风格简洁，支持使用欢喜云账号登录</p>
+                </li>
+            </ul>
+    </div>
+    <!-- 论坛 -->
+    <div class = "forum">
+        <div class = "head">
+            <h5>论坛精选</h5>
+            <a href="">前往论坛</a>
+        </div>
+        <ul>
+            <li>
+                <img src = "../images/0ac4853da0303c131147044f85d4bb1c (1).jpg"/>
+                <div class = "forum_d">
+                    <h6> 坚果 Pro 2 官方开箱照</h6>
+                    <p>“模仿 Smartisan OS 的拟物化重绘图标，我也试着画了一些。”</p>
+                    <a href="">阅读全文</a>
+                </div>
+            </li>
+            <li>
+                <img src = "../images/d00bbc1b5fc369c6bca2475b1a89b6c9 (1).png"/>
+                <div class = "forum_d">
+                    <h6>我来为 Smartisan OS 重绘图标</h6>
+                    <p>坚果 Pro 2 现已上市，1799 元起。下面是一些坚果 Pro 2 的实拍图。</p>
+                    <a href="">阅读全文</a>
+                </div>
+            </li>
+            <li>
+                <img src = "../images/c819e2f96fdb67ce3c38e99386212222 (1).png"/>
+                <div class = "forum_d">
+                    <h6> Smartisan 手机摄影教程合辑</h6>
+                    <p>构图、修图、光影……一次手机摄影的全面速成教学。</p>
+                    <a href="">阅读全文</a>
+                </div>
+            </li>
+            <li>
+                <img src = "../images/94a8a611307344b9957df83a37ef1ee0.jpg"/>
+                <div class = "forum_d">
+                    <h6>坚果 Pro 2纯白版图赏</h6>
+                    <p>元宵佳节明月升，元宵香从圆月来，皎洁如月的坚果 Pro 2纯白版图赏</p>
+                    <a href="">阅读全文</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- 购物车小球 -->
+    <div id = "ball"></div>
+    <div id = "html_1">
+        <iframe align="center" width=100% height="353" src="foot.html" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </div>
 </body>
 </html>

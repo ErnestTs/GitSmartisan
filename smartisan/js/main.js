@@ -7,7 +7,9 @@ require.config({
     paths: {
         // 模块名字: 模块路径
         "jquery": "jquery-1.11.3", //遵从AMD规范
-        "jquery-cookie": "jquery.cookie"
+        "jquery-cookie": "jquery.cookie",
+        "index": "index",
+        "parabola": "parabola"
     },
     shim: {
         /*
@@ -15,9 +17,12 @@ require.config({
             如果该类库不是一个标准AMD规范，我又不想去改代码
             需要通过下述方式定义该文件
         */
-
+        "parabola":{
+            exports: "_"
+        },
         //设置依赖关系
-        "jquery-cookie": ["jquery"]
+        "jquery-cookie": ["jquery"],
+        "parabola": ["jquery"]
     }
 })
 
@@ -27,6 +32,15 @@ require.config({
 
 require(["register"],function(register){
     console.log(register.register());
+})
+require(["index"],function(index){
+    console.log(index.main());
+})
+require(["fade"], function(fade){
+    console.log(fade.fade());
+})
+require(["goodsDetail"],function(goodsDetail){
+    console.log(goodsDetail.goodsDetail());
 })
 
 

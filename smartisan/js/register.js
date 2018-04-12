@@ -29,9 +29,8 @@ define(["jquery", "jquery-cookie"], function($){
             /*$(".regis").on("focus",".input",function(){
                 $(this).css("opacity",1).css("boxShadow","1px 1px 10px #ccc");
             })*/
-
-
         })
+        return "这是注册的代码";
     }
 
 
