@@ -249,6 +249,7 @@ define(["ballMove","jquery","jquery-cookie"], function(ballMove,$){
 
             })
         })
+        return "我是商品列表一览";
     }
     return{
         goodsDetail:goodsDetail

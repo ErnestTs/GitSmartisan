@@ -42,6 +42,9 @@ require(["fade"], function(fade){
 require(["goodsDetail"],function(goodsDetail){
     console.log(goodsDetail.goodsDetail());
 })
+require(["shoppingList"],function(shoppingList){
+    console.log(shoppingList.shoppingList());
+})
 
 
 
